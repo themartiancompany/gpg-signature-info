@@ -181,17 +181,8 @@ _gpg_signature_info() {
     _output_type="${1}" \
     _gnupg_home="${2}" \
     _target_file="${3}" \
-    _signatures=() \
-    _gpg_key_info_opts=() \
     _gpg_out \
-    _file_fingerprint \
-    _target_fingerprint \
-    _sig \
-    _passed
-  _gpg_key_info_opts+=(
-    -o
-      "fingerprint"
-  )
+    _file_fingerprint
   _gpg_run \
     "${_target_file}" \
     "${_gnupg_home}"
